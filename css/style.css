@@ -1,0 +1,365 @@
+/* css reset */
+* {
+    margin: 0px;
+    padding: 0px;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+/* CSS variable */
+:root {
+    --navbar-height: 59px;
+}
+
+/* navigation bar */
+#navbar {
+    display: flex;
+    align-items: center;
+    position: sticky; /*or relative*/
+    top: 0px;
+}
+
+#navbar::before {
+    content: "";
+    background-color: black;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.4;
+}
+
+/* navigation bar:logo and image */
+#logo {
+    margin: 10px 34px;
+}
+
+#logo img {
+    height: 90px;
+    width: 89px;
+    border-radius: 60px;
+    margin: 2px 3px;
+}
+
+/* navigation bar:list styling */
+
+#navbar ul {
+    display: flex;
+    font-family: 'Baloo Bhai 2', cursive;
+}
+
+
+
+#navbar ul li {
+    list-style: none;
+    font-size: 1.3em;
+}
+
+#navbar ul li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 2px 20px;
+    border-radius: 20px;
+
+}
+
+#navbar ul li a:hover {
+    display: block;
+    color: black;
+    background-color: white;
+
+}
+
+/* Home section */
+#home {
+    display: flex;
+    flex-direction: column;
+    padding: 3px 200px;
+    height: 320px;
+    justify-content: center;
+    align-items: center;
+}
+
+#home:before {
+    content: "";
+    background: url('../image/background1.jpg') no-repeat center center/cover;
+    /*phle hume css k folder se bahar ana hoga tbhi humne use kiya h ../ or fir image folder k andr jana hoga */
+    position: absolute;
+    height: 70%;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.9;
+}
+
+#home h1 {
+    color: white;
+    text-align: center;
+    font-family: 'Bree Serif', serif;
+}
+
+#home p {
+    color: white;
+    text-align: center;
+    font-size: 1.2rem;
+    font-family: 'Bree Serif', serif;
+
+}
+
+/* service section */
+#services {
+    margin: 20px;
+    /*34*/
+    display: flex;
+}
+
+#services .box {
+    border: 2px solid black;
+    padding: 34px;
+    margin: 3px 6px;
+    border-radius: 23px;
+    background-color: aliceblue;
+}
+
+#services .box img {
+    height: 150px;
+    display: block;
+    margin: auto;
+}
+
+#services .box p {
+    font-family: 'Bree Serif', serif;
+}
+
+/* client section */
+#client-section::before {
+    content: "";
+    position: absolute;
+    background: url('../image/client8.jpg') no-repeat center center/cover;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.4;
+}
+
+/* #client-section {
+    /* height: 344px; */
+    /* position: relative; */ /*isse liye hta diya h kyuki navbar neeche overlap ho jara tha client ki heading m hi or tab krne pr contact section ni ara tha*/
+/* } */
+
+#clients {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#clients img {
+    height: 80px;
+}
+
+.client-items {
+    padding: 24px;
+    /* margin: 10px 7px; */
+}
+
+/* contact section */
+/* #contact {
+    /* position: relative; */ /*iss liye hta diya kyuki scroll smooth ni kaam kr rha tha */
+    /* padding: 30px 3px; */
+/* } */ 
+
+#contact::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.7;
+    background: url('../image/service.jpg') no-repeat center center/cover;
+}
+
+#contact-box {
+    /* position: absolute; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+}
+
+#contact-box input,#contact-box textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 9px;
+    font-size: 1rem;
+}
+
+#contact-box form {
+    width: 40%;
+}
+
+#contact-box label {
+    font-size: 1.3rem;
+    font-family: 'Bree Serif', serif;
+}
+
+/* footer */
+footer {
+    background-color: black;
+    color: white;
+    padding: 5px 20px;
+}
+
+/* utility classes */
+.h-primary {
+    font-size: 3.2rem;
+    padding: 12px;
+    color: black;
+    font-family: 'Bree Serif', serif;
+}
+
+.h-secondary {
+    font-size: 2.3rem;
+    padding: 12px;
+    color: black;
+    font-family: 'Bree Serif', serif;
+}
+
+.btn {
+    padding: 6px 20px;
+    border: 2px solid white;
+    background-color: rgb(6, 5, 0);
+    color: white;
+    margin: 17px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 15px;
+}
+.btn a{
+    text-decoration: none;
+    color: antiquewhite;
+}
+
+.center {
+    text-align: center;
+}
+/* #bt{
+    padding: 6px 20px;
+    border: 2px solid white;
+    background-color: rgb(6, 5, 0);
+    color: white;
+    margin: 20px 105px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 15px;
+} */
+#customertable{
+    height: 130vh;
+    /* border: 2px solid black; */
+}
+#customertable::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 130%;
+    z-index: -1;
+    opacity: 0.7;
+    /* background: url('../image/menu.jpg') no-repeat center center/cover; */
+    /* background-color:  #daefe8; */
+    background-color:  #3c3c3c30;;
+}
+.filter{
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    /* height: 140vh; */
+    /* background: rgb(233,76,161);
+background: linear-gradient(90deg, rgba(233,76,161,1) 0%, rgba(199,74,234,1) 100%); */
+background: rgb(233,76,161);
+background: linear-gradient(90deg, rgba(233,76,161,1) 0%, rgba(199,74,234,0.5494572829131652) 100%);
+}
+.containertable{
+    margin: 36px 10px;
+}
+table{
+    width: 100%;
+    
+}
+thead{
+    justify-content: center;
+    align-items:center ;
+}
+thead th{
+    font-size: 1.8rem;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+tbody{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+tbody tr td{
+    font-size: 1.5rem;
+    font-weight: bold;
+    
+}
+table,th,tr,td{
+    border: 2px solid black;
+    border-collapse: collapse;
+} 
+
+#list{
+    margin: auto;
+    padding: 15px 0px;
+    display: flex;
+justify-content: center;
+}
+
+#list .box {
+    /* border: 2px solid black; */
+    padding: 4px;
+    margin: 3px 100px;
+    border-radius: 23px;
+    /* background-color: rgb(14, 20, 25); */
+    /* background: rgb(254,222,152); */
+/* background: linear-gradient(0deg, rgba(254,222,152,1) 0%, rgba(0,233,236,1) 110%); */
+}
+
+#list .box img {
+    height: 550px;
+    display: block;
+    margin: auto;
+    width: 500px;
+    border-radius: 15px;
+}
+/* #list .box img:hover {
+     width: 580px;
+     height: 600px;
+   cursor: pointer;
+} */
+
+#services .box p {
+    font-family: 'Bree Serif', serif;
+}
+.h-secondary2 {
+    font-size: 2.3rem;
+    padding: 12px;
+    color: black;
+    font-family: 'Bree Serif', serif;
+}
+.hero{
+    width: 100%;
+    /* border: 2px solid black; */
+    /* position: relative; */
+    padding: 0.5%;
+    display: inline;
+    align-items: center;
+    justify-content: center;
+
+}
